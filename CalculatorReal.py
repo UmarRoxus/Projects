@@ -1,3 +1,4 @@
+# Code edited and taken from https://www.geeksforgeeks.org/python-simple-gui-calculator-using-tkinter/
 # Python program to  create a simple GUI  
 # calculator using Tkinter 
   
