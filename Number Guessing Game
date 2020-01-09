@@ -1,0 +1,41 @@
+import random
+import time
+
+# This is the number of guessses taken to guess the number correctly
+guessesTaken = 0
+print("This is Umar's number guessing game, try to win in as 5 guesses as possible!")
+time.sleep(1.5)
+print("Please enter the numbers that I will pick between!") 
+time.sleep(1.5)
+
+D = int(input("Enter the minimum number"))
+E = int(input("Enter the maximum number"))
+
+
+
+print("I am thinking of a number between {}  and {}".format(D,E))
+N = random.randint(D, E)
+
+while guessesTaken < 5:
+  print("Take a guess.")
+  guess = input()
+  guess = int(guess)
+
+  guessesTaken = guessesTaken + 1
+
+  if guess < N:
+   print("Your guess was too low.")
+  if guess > N:
+
+   print("Your guess was too high.")
+  if guess == N:
+   break
+  
+
+if guess == N:
+ guessesTaken = str(guessesTaken)
+print('Good job, ! You guessed my number in ' + guessesTaken + ' guesses!')
+
+if guess != N:
+ number = str(N)
+ print('Nope. The number I was thinking of was ' + number)
