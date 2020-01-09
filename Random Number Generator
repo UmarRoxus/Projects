@@ -1,0 +1,5 @@
+from random import *
+
+D = int(input("Enter the minimum number"))
+E = int(input("Enter the maximum number"))
+print(randint(D, E))
