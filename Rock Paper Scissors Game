@@ -1,0 +1,45 @@
+import random
+import sys
+
+# 1 is rock, #2 is paper, 3 is scissors
+
+def main(): # def function, only is used when called upon
+
+  Human = input("Rock, Paper or Scissors")
+  Ai = (random.randint(1, 3))
+
+  if Human == "Rock" and Ai == 1:
+        print("Rock against Rock, you tie!")
+  elif Human == "Rock" and Ai == 2:
+        print("Paper covers Rock, you lose!")
+  elif Human == "Rock" and Ai == 3:
+        print("Rock crushes Scissors, you win!")
+
+  elif Human == "Paper" and Ai == 1:
+        print("Paper covers Rock, you win!")
+  elif Human == "Paper" and Ai == 2:
+        print("Paper on Paper, you tie!")
+  elif Human == "Paper" and Ai == 3:
+        print("Scissors cuts paper, you lose!")
+
+  elif Human == "Scissors" and Ai == 1:
+        print("Rock crushes Scissors you lose!")
+  elif Human == "Scissors" and Ai == 2:
+        print("Scissors cuts paper, you win!")
+  elif Human == "Scissors" and Ai == 3:
+        print("Scissors against Scissors, you tie!")
+  elif Human != "Rock" or "Paper" or "Scissors":
+        print("Invalid Choice, answers are CASE SENSITIVE")
+  
+def start():
+   main()
+   Restart = input("Would you like to go again? Y / N")
+   if Restart == "Y":
+     pass
+     print("")
+     start()
+   elif Restart == "N":
+     print("Thanks for playing")
+     sys.exit()
+
+start()
